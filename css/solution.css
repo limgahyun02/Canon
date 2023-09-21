@@ -1,0 +1,30 @@
+#solution {
+    padding: 150px 0;
+}
+
+#solution .wrap .container {
+    column-gap: 30px;
+    position: relative;
+}
+
+#solution .wrap .container div p {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+#solution .wrap .container div a img {
+    border-radius: 10px;
+}
+
+#solution .wrap .container .container-sol03 {
+    position: absolute;
+    left: 0;
+    top: 400px;
+}
+
+#solution .wrap .container .container-sol04 {
+    position: absolute;
+    left: 34%;
+    top: 400px;
+}

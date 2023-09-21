@@ -1,0 +1,173 @@
+.vod {
+    position: fixed;
+    bottom: 0;
+}
+
+.vod > img {
+    display: block;
+    width: 280px;
+    height: auto;
+}
+
+.vod a {
+    position: relative;
+}
+
+.vod a img {
+    position: absolute;
+    top: -385px;
+    right: -255px;
+}
+
+.quickmenu-wrap {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.white {
+    background-color: #fff;
+}
+
+.quickmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+} 
+
+.quickmenu ul {
+    padding: 20px;
+}
+
+
+.quickmenu ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.quickmenu ul li:nth-child(1) a::before {
+    content: "";
+    background-image: url(../img/quickmenu-sitemap.svg);
+    background-size: contain;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.quickmenu ul li:nth-child(2) a::before {
+    content: "";
+    background-image: url(../img/quickmenu-partner.svg);
+    background-size: contain;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+
+.quickmenu ul li:nth-child(3) a::before {
+    content: "";
+    background-image: url(../img/quickmenu-store.svg);
+    background-size: contain;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.quickmenu ul li:nth-child(4) a::before {
+    content: "";
+    background-image: url(../img/quickmenu-sns.svg);
+    background-size: contain;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.quickmenu ul li:nth-child(5) a::before {
+    content: "";
+    background-image: url(../img/quickmenu-inquiry.svg);
+    background-size: contain;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.quickmenu ul li:nth-child(6) a::before {
+    content: "";
+    background-image: url(../img/quickmenu-etax.svg);
+    background-size: contain;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.quickmenu ul li a span {
+    padding-top: 10px;
+}
+
+.quickmenu .on {
+    font-size: 0;
+    background-image: url(../img/quickmenu-list.svg);
+    border: none;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.quickmenu .off {
+    border: 1px solid #dc000c;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    
+    margin-top: 15.5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center
+}
+
+.quickmenu .off span {
+    font-size: 0;
+    background-image: url(../img/quickmenu_plus.svg);
+    background-size: contain;
+    display: block;
+    width: 30px;
+    height: 30px;
+    
+    
+}
+
+.arrow {
+    background-color: #fff;
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    border: 1px solid;
+}
+
+.arrow span {
+    font-size: 0;
+    background-image: url(../img/ico_quick_arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.none {
+    display: none;
+}

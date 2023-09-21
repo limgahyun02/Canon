@@ -1,0 +1,26 @@
+#title {
+	position: relative;
+  top: 110px;
+}
+
+.slideC {
+	position: relative;
+}
+
+.slideC div {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+}
+
+.slideC div > a  {
+	margin-top: 30px;
+}
+
+.slideW {
+	color: #fff;
+}
+
+.slick-slide img {
+	width: 100%;
+}

@@ -1,0 +1,42 @@
+.slick-prev, .slick-next {
+    width: 45px;
+    height: 45px;
+    border: 6px solid #333;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+.slick-prev {
+    left: 225px;
+    border-top: transparent;
+    border-right: transparent;
+}
+.slick-next {
+    right: 225px;
+    border-bottom: transparent;
+    border-left: transparent;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: #fff;
+    border-color: #ED3124;
+}
+
+.slick-prev::before, .slick-next::before {
+    color: #333;
+    font-size: 30px;
+    content: "";
+}
+
+.slick-dots{
+    bottom: 36px;
+}
+.slick-dots li button::before{
+    font-size: 17px;
+    transition: transform 0.5s,color 0.5s,opacity 0.5s;
+}
+.slick-dots li.slick-active button::before {
+  opacity: .75;
+  color: #ED3124;
+  transform: scale(1.4);  
+}

@@ -1,0 +1,139 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+}
+
+header .container {
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+header .header-top {
+    justify-content: end;
+    align-items: center;
+}
+
+header .header-top button {
+    font-size: 0;
+    background-image: url(../img/ico_search_header.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+header .header-top ul {
+    position: relative;
+}
+
+header .header-top ul li a {
+    color: #666;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+header .header-top ul li:nth-child(1) a::before {
+    content: "";
+    border-right: 1px solid #999;
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    top: calc(50% - 5px);
+    right: calc(50% - 10px);
+  }
+
+header .container .logo img {
+    width: 115px;
+    height: 44px;
+}
+
+header .container .logo .nav-top {
+    font-size: 14px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container .logo .nav-top ul li a {   
+    border-radius: 5px;
+    width: 112px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .logo .nav-top .menu-left li {
+    margin-left: 35px;
+}
+
+header .container .logo .nav-top .menu-center li:first-child {
+    margin-left: 35px;
+}
+
+header .container .logo .nav-top .menu-center li a {
+    display: flex;
+}
+
+header .container .logo .nav-top .menu-center li a::after {
+    content: "";
+    background-image: url(../img/ico_header_link_black.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+header .container .logo .nav-top .menu-right li {
+    margin-left: 5px;
+}
+
+header .container .logo .nav-top .menu-right li a.download {
+    background-color: #000;
+    width: 100px;
+}
+
+header .container .logo .nav-top .menu-right li a.jeong {
+    background-color: red;
+    width: 80px;
+}
+
+/* 메뉴 슬라이드 */
+
+header > .nav > ul {
+    height: 430px;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    display: none;
+}
+
+header > .nav > ul > li {
+    position: relative;
+    width: 100px;
+}
+
+header > .nav > ul li div.down {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    width: 100%;
+}
+
+header > .nav > ul li div.down ul {
+    flex-direction: column;
+    gap: 20px;
+}
+.nav > ul:nth-child(1) li:nth-child(2) > div {
+    
+}

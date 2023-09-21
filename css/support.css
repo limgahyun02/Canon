@@ -1,0 +1,65 @@
+#support {
+    padding: 300px 0 100px 0;
+}
+
+#support .container .container-sup:nth-child(-n + 4) {
+    border-bottom: 1px solid #eee;
+}
+
+#support .container .container-sup:nth-of-type(5) {
+    border-bottom: 1px solid
+}
+
+#support .container .container-sup .sup-wrap {
+    align-items: center;
+    padding: 50px 0;
+}
+
+#support .container .container-sup .sup-wrap p {
+    font-size: 16px;
+    line-height: 1.6;
+    width: 560px;
+}
+
+#support .container .container-sup .sup-wrap .link-wrap {
+    display: flex;
+}
+
+#support .container .container-sup .sup-wrap .link-wrap a {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#support .container .container-sup .sup-wrap .link::after {
+    content: "";
+    background-image: url(../img/ico_alink.svg);
+    background-size: contain;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+/* 공지사항 및 브랜드소식 */
+#news h4 {
+    color: #FF0000;
+    position: relative;
+}
+
+#news h4::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/plus.svg);
+    background-size: contain;
+    position: absolute;
+    top: 65px;
+}
+
+#news p {
+    line-height: 2;
+}
+
+#gong {
+    border-bottom: 1px solid;
+}
