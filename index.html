@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/solution.css">
+    <link rel="stylesheet" href="css/production.css">
+    <link rel="stylesheet" href="css/support.css">
+    <link rel="stylesheet" href="css/quickmenu.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"> 
+    <script src="js/jquery-3.7.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="css/modify.css">
+
+    <script type="text/javascript">
+        $(document).ready(
+            function(){
+                $(window).scroll(function(){		
+                    if($('body, html').scrollTop() > 500){	
+                        $('.arrow').removeClass("none");
+                    } else if ($('body, html').scrollTop() < 500) {
+                        $('.arrow').addClass("none");
+                    }
+                });
+
+                $(".menu-left li").mouseenter(function(){
+                    var n = $(this).index()+1;
+                        $(".nav ul:nth-child("+n+")").slideDown(function(){
+                            $(".nav ul:nth-child("+n+") > li a").mouseenter(function(){
+                                n2 = $(this).parent().index()+1;
+                                $(".nav > ul:nth-child("+n+") > li:nth-child("+n2+") > div.down").slideDown();
+                                // $(".nav > ul:nth-child("+n+") > li:nth-child("+n2+") > div > ul").css("display","flex");
+                                // $(".nav .down").not(".nav > ul:nth-child("+n+") > li:nth-child("+n2+") > div").css("display","none");
+                            });
+                        });
+                    $(".nav ul").css("display","flex");
+                    $(".nav > ul").not(".nav > ul:nth-child("+n+")").css("display","none");
+                });
+
+                $('.slide').slick({
+                    dots: true,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll:1
+                });
+
+                $(".quickmenu .on").click( function(){
+                    $(".quickmenu ul").addClass("none");
+                    $(".quickmenu").removeClass("white");
+                    $("button.on").addClass("none");
+                    $("button.on").removeClass("on");
+                    $("button.off").removeClass("none");
+                    $("button.off").addClass("flex");
+                });
+
+                $(".quickmenu .off").click( function(){
+                    $(".quickmenu ul").removeClass("none");
+                    $(".quickmenu").addClass("white");
+                    $("button.none").addClass("on");
+                    $("button.none").removeClass("none");
+                    $("button.off").addClass("none");
+                });
+
+                $(".vod a").click( function(){
+                    $(".vod").addClass("none");
+                    return false;
+                });
+
+                $(".arrow").click(function(){
+                    $("html,body").animate({scrollTop:0},500);
+                    return false;
+                });
+            }
+        );
+    </script>
+</head>
+<body>
+    <!-- 상단 -->
+    <header>
+        <div class="container wrap">
+            <div class="header-top flex">
+                <form action="">
+                    <button class="search">검색</button>
+                </form>
+                <ul class="flex">
+                    <li>
+                        <a href="">로그인</a>
+                    </li>
+                    <li>
+                        <a href="">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logo flex">
+                <h1>
+                    <a href=""><img src="img/logo.svg" alt=""></a>
+                </h1>
+                <div class="nav-top flex">
+                    <ul class="menu-left flex">
+                        <li>
+                            <a href="">컨슈머</a>
+                        </li>
+                        <li>
+                            <a href="">비즈니스</a>
+                        </li>
+                        <li>
+                            <a href="">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="">이벤트</a>
+                        </li>
+                    </ul>
+                    <ul class="menu-center flex">
+                        <li>
+                            <a href="">C Logue</a>
+                        </li>
+                        <li>
+                            <a href="">고객지원</a>
+                        </li>
+                        <li>
+                            <a href="">e스토어</a>
+                        </li>
+                        <li>
+                            <a href="">아카데미</a>
+                        </li>
+                    </ul>
+                    <ul class="menu-right flex">
+                        <li>
+                            <a href="" class="download flex colorW">다운로드센터</a>
+                        </li>
+                        <li>
+                            <a href="" class="jeong flex colorW">정품등록</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="wrap">
+                <li class="1lv">
+                    <a href="#">컨슈머 제품</a>
+                    <div class="down">
+                        <ul>
+                            <li>
+                                <a href="#">렌즈교환카메라</a>
+                            </li>
+                            <li>
+                                <a href="#">렌즈</a>
+                            </li>
+                            <li>
+                                <a href="#">컴팩트 카메라</a>
+                            </li>
+                            <li>
+                                <a href="#">영상/방송 기기</a>
+                            </li>
+                            <li>
+                                <a href="#">잉크젯프린터</a>
+                            </li>
+                            <li>
+                                <a href="#">미니 포토 프린터</a>
+                            </li>
+                            <li>
+                                <a href="#">쌍안경</a>
+                            </li>
+                            <li>
+                                <a href="#">프리젠터</a>
+                            </li>
+                            <li>
+                                <a href="#">계산기</a>
+                            </li>
+                            <li>
+                                <a href="#">웨어러블 카메라</a>
+                            </li>
+                            <li>
+                                <a href="#">정부조달제품</a>
+                            </li>
+                            <li>
+                                <a href="#">C Logue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="2lv">
+                    <a href="">프로</a>
+                    <!-- <div class="down">
+                        <ul>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div> -->
+                </li>
+                <li class="3lv">
+                    <a href="">C Logue</a>
+                    <div class="down">
+                        <ul>
+                            <li>
+                                <a href="">가방</a>
+                            </li>
+                            <li>
+                                <a href="">의류</a>
+                            </li>
+                            <li>
+                                <a href="">악세서리</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">라운지</a>
+                    <div class="down">
+                        <ul>
+                            <li>
+                                <a href="">캐논플렉스</a>
+                            </li>
+                            <li>
+                                <a href="">매거진</a>
+                            </li>
+                            <li>
+                                <a href="">포토갤러리</a>
+                            </li>
+                            <li>
+                                <a href="">캐논갤러리</a>
+                            </li>
+                            <li>
+                                <a href="">Rchive</a>
+                            </li>
+                            <li>
+                                <a href="">크리에이티브 파크</a>
+                            </li>
+                            <li>
+                                <a href="">Easy-Photo Print Editor</a>
+                            </li>
+                            <li>
+                                <a href="">Poster Artist Life</a>
+                            </li>
+                            <li>
+                                <a href="">모바일앱</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">매장안내</a>
+                </li>
+            </ul>
+            <ul class="wrap">
+                <li>
+                    <a href="">컨슈머 제품</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 타이틀 -->
+    <div id="title">
+        <div class="container">
+            <ul class="slide">
+                <li class="slideC">
+                    <img src="img/title01.jpg" alt="존경받는<br />기업 1위">
+                    <div class="flex flex-column">
+                        <span>대한민국 No.1 캐논!</span><span class="block"></span>
+                        <strong>한국에서 가장<span class="block"></span>존경받는 기업<span class="block"></span>3년 연속 1위</strong>
+                        <a href="" class="more colorW">더 알아보기</a>
+                    </div>
+                </li>
+                <li class="slideC slideW">
+                    <img src="img/title02.jpg" alt="파워샷 V10<br />정식 출시">
+                    <div class="flex flex-column">
+                        <span>세상의 모든 브이로거들에게</span><span class="block"></span>
+                        <strong>탑티어<span class="block"></span>브이로그 카메라<span class="block"></span>PowerShot V10</strong>
+                        <a href="" class="more colorW">더 알아보기</a>
+                    </div>
+                </li>
+                <li class="slideC slideW">
+                    <img src="img/title03.jpg" alt="캐논 썸머페스타<br />정품등록 이벤트">
+                    <div class="flex flex-column">
+                        <span>최대 40만원의 상당</span><span class="block"></span>
+                        <strong>캐논 썸머페스타<span class="block"></span>정품등록 이벤트</strong>
+                        <a href="" class="more colorW">더 알아보기</a>
+                    </div>
+                </li>
+                <li class="slideC slideW">
+                    <img src="img/title04.jpg" alt="iR ADV DX4800<br />series">
+                    <div class="flex flex-column">
+                        <span>스마트한 업무환경을 가능케하는 업무 혁신의 시작</span><span class="block"></span>
+                        <strong>imageRUNNER<span class="block"></span>ADVANCE DX<span class="block"></span>4800 Series</strong>
+                        <a href="" class="more colorW">더 알아보기</a>
+                    </div>
+                </li>
+                <li class="slideC slideW">
+                    <img src="img/title05.jpg" alt="EOS R5C<br />프로모션">
+                    <div class="flex flex-column">
+                        <span>펌웨어 업데이트 기념</span><span class="block"></span>
+                        <strong>EOS R5C<span class="block"></span>정품등록 프로모션</strong>
+                        <a href="" class="more colorW">더 알아보기</a>
+                    </div>
+                </li>
+                <li class="slideC slideW">
+                    <img src="img/title06.jpg" alt="C Logue<br />시즌 오프 프로모션">
+                    <div class="flex flex-column">
+                        <span>크리에이터의 라이프스타일 브랜드</span><span class="block"></span>
+                        <strong>C Logue<span class="block"></span>시즌 오프 프로모션<span class="block"></span>전 품목 30% 할인</strong>
+                        <a href="" class="more colorW">더 알아보기</a>
+                    </div>
+                </li>
+                <li class="slideC slideW">
+                    <img src="img/title07.jpg" alt="QX10<br />프로모션">
+                    <div class="flex flex-column">
+                        <span>미니 포토프린터</span><span class="block"></span>
+                        <strong>셀피스퀘어<span class="block"></span>QX10 프로모션</strong>
+                        <a href="" class="more colorW">더 알아보기</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 내용 -->
+    <main>
+        <section id="solution">
+            <div class="wrap">
+                <h2>Total Imaging Solution</h2>
+                <div class="container flex marT50B150">
+                    <div class="container-sol01">
+                        <a href=""><img src="img/solution01.jpg" alt="캐논의 새로운 고품질 무한 포토 프린터"></a>
+                        <p>캐논의 새로운 고품질<span class="block"></span>무한 포토 프린터</p>
+                        <a href="" class="btn">무한 잉크젯</a>
+                        <a href="" class="btn">G-Series</a>
+                        <a href="" class="btn">포토프린터</a>
+                    </div>
+                    <div class="container-sol02">
+                        <a href=""><img src="img/solution02.jpg" alt="나만의 포토그래퍼, 캐논 PowerShot PICK 카메라!"></a>
+                        <p>나만의 포토그래퍼,<span class="block"></span>캐논 PowerShot PICK 카메라!</p>
+                        <a href="" class="btn">PowerShot PICK</a>
+                        <a href="" class="btn">컴팩트 카메라</a>
+                    </div>
+                    <div class="container-sol05">
+                        <a href=""><img src="img/solution05.jpg" alt="디지털트랜스포메이션 오피스를 선도하다."></a>
+                        <p>디지털트랜스포메이션 오피스를<span class="block"></span>선도하다.</p>
+                        <a href="" class="btn">iR ADV DX Series</a>
+                    </div>
+                    <div class="container-sol03">
+                        <a href=""><img src="img/solution03.jpg" alt="독보적인 초경량 풀프레임의 탄생"></a>
+                        <p>독보적인 초경량 풀프레임의 탄생</p>
+                        <a href="" class="btn">EOS R8</a>
+                        <a href="" class="btn">풀프레임 미러리스</a>
+                    </div>
+                    <div class="container-sol04">
+                        <a href=""><img src="img/solution04.png" alt="뛰어난 색감 실현, 생산성 높은 컬러 디지털 인쇄기"></a>
+                        <p>뛰어난 색감 실현, 생산성 높은<span class="block"></span>컬러 디지털 인쇄기</p>
+                        <a href="" class="btn">imagePRESS V1000</a>
+                        <a href="" class="btn">디지털 인쇄기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id ="production">
+            <div class="container-full">
+                <div class="container wrap flex">
+                    <div class="marR60">
+                        <span class="red">NEW & HOT</span>
+                        <h3>가장 인기있는 제품</h3>
+                        <a href="" class="more colorW">더 알아보기</a>
+                    </div>
+                    <div class="img">
+                        <a href="#">
+                            <img src="img/production01.jpg" class="imgborderR20" alt="캐논 복합기의 혁명 무한잉크젯 G-Series">
+                            <div>
+                                <p class="font18 marB15 colorW">압도적인 하이브리드 잉크젯 시스템</p>
+                                <strong class="font30 colorW">캐논 복합기의 혁명<span class="block"></span>무한잉크젯 G-Series</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="container wrap flex">
+                    <div class="container-pro flex">
+                        <a href="#">
+                            <img src="img/production02.jpg" class="imgborderR20" alt="크리에이터를 위한 초경량 카메라 퍼펙트 퀄리티 매니저">
+                            <div>
+                                <p class="font18 marB15 colorW">크리에이터를 위한 초경량 카메라<span class="block"></span>퍼펙트 퀄리티 매니저</p>
+                                <storng class="font30 colorW">EOS R50</storng>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="container-pro flex">
+                        <a href="#">
+                            <img src="img/production03.jpg" class="imgborderR20" alt="디지털트랜스포메이션 오피스, 새로운 스마트 오피스 환경을 실현한다">
+                            <div>
+                                <p class="font18 marB15 colorW">디지털트랜스포메이션 오피스,<span class="block"></span>새로운 스마트 오피스 환경을 실현한다</p>
+                                <storng class="font30 colorW">imageRUNNER<span class="block"></span>ADVANCE DX Series</storng>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="container-pro flex">
+                        <a href="#">
+                            <img src="img/production04.jpg" class="imgborderR20" alt="완전히 새로운 형태의 VR 영상 제작 장비">
+                            <div>
+                                <p class="font18 marB15 colorW">완전히 새로운 형태의 VR 영상 제작 장비</p>
+                                <storng class="font30 colorW">RF 5.2mm F2.8L<span class="block"></span>DUAL FISHEYE</storng>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id ="support">
+            <div class="container wrap">
+                <div class="container-sup">
+                    <a href="">
+                        <div class="sup-wrap flex">
+                            <h4>프로</h4>
+                            <p>캐논코리아는 다양한 영역에서 활동하는 프로페셔널들의 활동을 지원하고<br /> 협업 하고 있습니다.</p>
+                            <img src="img/support01.png" alt="프로">
+                        </div>
+                    </a>
+                </div>
+                <div class="container-sup">
+                    <a href="">
+                        <div class="sup-wrap flex">
+                            <h4>Creative Park</h4>
+                            <p>실생활에 활용 가능한 근사한 작품을 만들어 보세요.</p>
+                            <img src="img/support02.png" alt="Creative Park">
+                        </div>
+                    </a>
+                </div>
+                <div class="container-sup">
+                    <a href="">
+                        <div class="sup-wrap flex">
+                            <h4>Rchive</h4>
+                            <p>EOS R System의 모든 것을 한 자리에서 확인할 수 있습니다.</p>
+                            <img src="img/support03.png" alt="Rchive">
+                        </div>
+                    </a>
+                </div>
+                <div class="container-sup">
+                    <a href="">
+                        <div class="sup-wrap flex">
+                            <h4>E-카탈로그</h4>
+                            <p>캐논의 다양한 제품을 더 자세히 알아보려면 온라인 제품 안내서를<br />다운 받아보세요.</p>
+                            <img src="img/support04.png" alt="Rchive">
+                        </div>
+                    </a>
+                </div>
+                <div class="container-sup">
+                    <div class="sup-wrap flex">
+                        <h4>SAON</h4>
+                        <div class="flex flex-column">
+                            <p>SAON은 캐논코리아가 제공하는 Medical Total Solution 브랜드입니다.</p>
+                            <div class="link-wrap">
+                                <a href="" class="link">SAON 소개</a>
+                                <a href="" class="link">SAON 메디몰</a>
+                            </div>
+                        </div>
+                        <a href="">
+                            <img src="img/support05.png" alt="Rchive">
+                        </a>
+                    </div>
+                </div>
+                <div id="news">
+                    <div id="gong" class="padTB100">
+                        <div class="container-gong">
+                            <div class="gong-wrap flex">
+                                <a href="">
+                                    <h4>공지사항</h4>
+                                </a>
+                                <div>
+                                    <p>홈페이지 서버 보안 업데이트 안내</p>
+                                    <div class="flex">
+                                        <p style="width: 857px;">안정적인 서비스 제공과 고객 편의를 위하여 홈페이지 서버에 대한 보안 업데이트를 진행</p>
+                                        <p>2023-06-19</p>
+                                    </div>
+                                    <p class="marT50">개인정보 처리 방침 개정 안내(2023년 6월 15일 적용)</p>
+                                    <div class="flex">
+                                        <p  style="width: 857px;">개인정보처리방침이 2023년 06월 15일부로 아래와 같이 변경되어 안내</p>
+                                        <p>2023-06-08</p>
+                                    </div>
+                                    <p class="marT50">개인정보 처리 방침 개정 안내(2023년 4월 7일 적용)</p>
+                                    <div class="flex">
+                                        <p  style="width: 857px;">개인정보처리방침이 2023년 04월 07일부로 아래와 같이 변경되어 안내</p>
+                                        <p>2023-03-31</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="brand" class="padTB100">
+                        <div class="container-brand">
+                            <div class="brand-wrap flex">
+                                <a href="">
+                                    <h4>브랜드 소식</h4>
+                                </a>
+                                <div>
+                                    <p>크리에이터를 위한 라이프스타일 브랜드 ‘C Logue’, 시즌 오프 프로모션 전개</p>
+                                    <div class="flex">
+                                        <p style="width: 857px;">“최대 10만원 이상 할인! 여름 휴가철을 맞아 프리미엄·트렌디한 패션 아이템을 제안합니다”</p>
+                                        <p>2023-07-18</p>
+                                    </div>
+                                    <p class="marT50">캐논코리아, 흑백 레이저 프린터 ‘LBP122dw‘ 및 소형 레이저 복합기 ’MF270 시리즈’ 출시</p>
+                                    <div class="flex">
+                                        <p  style="width: 857px;">“심플한 디자인에 성능은 업그레이드한 캐논 프린터·복합기 신제품을 지금 바로 만나보세요”</p>
+                                        <p>2023-07-10</p>
+                                    </div>
+                                    <p class="marT50">캐논, EOS 시리즈 카메라 1억 1천만대 및 RF/EF 렌즈 1억 6천만대 누적 생산 돌파</p>
+                                    <div class="flex">
+                                        <p  style="width: 857px;">캐논, EOS 시리즈 카메라 1억 1천만대 및 RF/EF 렌즈 1억 6천만대 누적 생산 돌파</p>
+                                        <p>2023-07-05</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 영상 및 퀵메뉴 -->
+    <div class="vod">
+        <img src="img/vod.png" alt="vod">
+        <a href="">
+            <img src="img/ico_modal_close.svg" alt="끄기">
+        </a>
+    </div>
+    <div class="quickmenu-wrap">
+        <nav class="quickmenu white">
+            <ul>
+                <li>
+                    <a href=""><span>사이트맵</span></a>
+                </li>
+                <li>
+                    <a href=""><span>파트너웹</span></a>
+                </li>
+                <li>
+                    <a href=""><span>매장안내</span></a>
+                </li>
+                <li>
+                    <a href=""><span>캐논 SNS</span></a>
+                </li>
+                <li>
+                    <a href=""><span>1:1 문의</span></a>
+                </li>
+                <li>
+                    <a href=""><span>전자세금</span></a>
+                </li>
+            </ul>
+            <button class="on">접기</button>
+            <button class="off none"><span>펼치기</span></button>
+        </nav>
+        <a href="" class="arrow none">
+            <span>상단</span>
+        </a>
+    </div>
+    <!-- 하단 -->
+    <footer id="footer">
+        <div class="footer">
+            <div class="wrap">
+                <ul class="menu flex">
+                    <li>
+                        <a href="">컨슈머 제품</a>
+                    </li>
+                    <li>
+                        <a href="">비즈니스 제품</a>
+                    </li>
+                    <li>
+                        <a href="">라운지</a>
+                    </li>
+                    <li>
+                        <a href="">제품 구입/지원</a>
+                    </li>
+                    <li>
+                        <a href="">회사소개</a>
+                    </li>
+                    <li>
+                        <!-- <section>
+                            <option value=""></option>
+                        </section> -->
+                        <button></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="quick marT30B20">
+                <ul class="flex">
+                    <li>
+                        <a href="">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="" class="padL10">개인정보 처리방침</a>
+                    </li>
+                    <li>
+                        <a href="" class="padL10">영상정보처리기기운영관리방침</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="addr">
+                <p>캐논코리아 (주)<span>대표자 : 박정우,혼마토시오</span><span>사업자등록번호 : 120-81-15636 </span><span>통신판매 번호 : 강남-01282 </span></p>
+                <p>주소 : 서울특별시 강남구 테헤란로 607 (삼성동)<span>복합기 • 카메라 고객상담실 : 1533-3355</span></p>
+                <p>Copyright © CANON KOREA All Rights reserved</p>
+            </div>
+            <div class="site">
+                <ul class="flex">
+                    <li><img src="img/footer01.png" alt="가족친화 우수기업">가족친화 우수기업</li>
+                    <li><img src="img/footer02.png" alt="소비자 중심 경영">소비자 중심 경영</li>
+                    <li><img src="img/footer03.png" alt="온라인 쇼핑몰 운영">[인증범위]캐논코리아 온라인 쇼핑몰 운영(e스토어, 비즈몰)<br />[유효기간]2022.10.19 ~ 2025.10.18</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sitemap">
+            <div class="wrap flex">
+                <div class="sns">
+                    <span class="marR60">기업대표/복합기/프린터</span>
+                    <ul class="flex">
+                        <li>
+                            <a href=""><img src="img/ico_youtube.svg" alt="유튜브"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ico_facebook.svg" alt="페이스북"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ico_blog.svg" alt="블로그"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sns marR350">
+                    <span>카메라/렌즈</span>
+                    <ul class="flex">
+                        <li>
+                            <a href=""><img src="img/ico_youtube.svg" alt="유튜브"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ico_insta.svg" alt="인스타"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ico_facebook.svg" alt="페이스북"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ico_blog.svg" alt="블로그"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ico_post.png" alt="포스트"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ico_kakao.svg" alt="카카오"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ico_twitter.svg" alt="트위터"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="family flex">
+                    <div>
+                        <select name="" id="" class="select">
+                            <option value="" class="none">Family Site</option>
+                            <option value="">Lotte group</option>
+                            <option value="">Canon Global</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="" id="" class="select">
+                            <option value="" class="none">캐논 관계자 Site</option>
+                            <option value="">캐논메디칼시스템즈코리아</option>
+                            <option value="">캐논쎄미콘덕터엔지니어링코리아(주)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
